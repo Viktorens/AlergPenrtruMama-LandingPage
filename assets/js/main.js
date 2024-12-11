@@ -72,8 +72,7 @@ window.addEventListener('scroll', scrollActive)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 3000,
-    delay: 400,
+    duration: 1500,
     // reset: true // Animations repeat
 })
 
