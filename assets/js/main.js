@@ -30,13 +30,13 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== ADD BLUR TO HEADER ===============*/
-const blurHeader = () =>{
-    const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the blur-header class to the header tag
-    this.scrollY >= 50 ? header.classList.add('blur-header') 
-                       : header.classList.remove('blur-header')
-}
-window.addEventListener('scroll', blurHeader)
+// const blurHeader = () =>{
+//     const header = document.getElementById('header')
+//     // When the scroll is greater than 50 viewport height, add the blur-header class to the header tag
+//     this.scrollY >= 50 ? header.classList.add('blur-header') 
+//                        : header.classList.remove('blur-header')
+// }
+// window.addEventListener('scroll', blurHeader)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
@@ -72,8 +72,7 @@ window.addEventListener('scroll', scrollActive)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 3000,
-    delay: 400,
+    duration: 1500,
     // reset: true // Animations repeat
 })
 

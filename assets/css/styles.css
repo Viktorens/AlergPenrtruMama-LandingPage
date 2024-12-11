@@ -7,14 +7,14 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 70%);
+  --title-color: hsl(323, 54%, 52%);
+  --text-color: hsl(0, 0%, 0%);
   --text-color-light: hsl(0, 0%, 60%);
-  --body-color: hsl(0, 0%, 0%);
-  --container-color: hsl(0, 0%, 8%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(0, 0%, 95%);
   --shadow-gradient: linear-gradient(180deg, 
-                    hsla(0, 0%, 0%, 0) 50%, 
-                    hsl(0, 0%, 0%) 125%);
+                    hsla(179, 60%, 39%, 0) 50%, 
+                    hsl(179, 60%, 39%) 125%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -113,6 +113,7 @@ img {
 
 .section {
   padding-block: 5rem 1rem;
+  background: white;
 }
 
 .section__title {
@@ -162,7 +163,7 @@ img {
     position: fixed;
     top: -100%;
     left: 0;
-    background-color: hsla(0, 0%, 0%, .3);
+    background-color: hsla(0, 0%, 100%, .3);
     width: 100%;
     padding-block: 4rem;
     backdrop-filter: blur(24px);
@@ -217,9 +218,9 @@ img {
   position: absolute;
   width: 1000%;
   height: 100%;
-  background-color: hsla(0, 0%, 0%, .3);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background-color: hsla(0, 0%, 100%, .7);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
   top: 0;
   left: 0;
   z-index: -1;
@@ -233,16 +234,28 @@ img {
 /*=============== HOME ===============*/
 .home {
   position: relative;
+  background-color: transparent;
 }
 
 .home__bg {
-  position: absolute;
+  position: fixed;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
-  height: 750px;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
+}
+
+.home__data {
+  background-color: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.magenta_color_text {
+  color: #c74295;
 }
 
 .home__shadow {
@@ -252,8 +265,10 @@ img {
   width: 100%;
   height: 800px;
   background: linear-gradient(180deg, 
-            hsla(0, 0%, 0%, 0) 58%, 
-            hsl(0, 0%, 0%) 78%);
+            hsla(179, 60%, 39%, 0) 58%, 
+            hsl(179, 60%, 39%) 78%);
+
+            
 }
 
 .home__container {
@@ -274,11 +289,13 @@ img {
 .home__title {
   font-size: var(--biggest-font-size);
   margin-bottom: 1rem;
+  color: hsl(179, 60%, 39%);
+  line-height: 90%;
 }
 
 .home__description {
   margin-bottom: 2rem;
-  color: var(--title-color);
+  color: black;
 }
 
 .home__cards {
@@ -315,11 +332,18 @@ img {
   transform: scale(1.2);
 }
 
+.small-text {
+  font-size: 1rem;
+  display: inline-block;
+  transform: rotate(-90deg);
+  vertical-align: middle;
+}
+
 /*=============== BUTTON ===============*/
 .button {
-  background-color: hsla(0, 0%, 100%, .2);
+  background-color: hsla(323, 54%, 52%, 1);
   padding: 1.25rem 1.5rem;
-  color: var(--title-color);
+  color: white;
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
@@ -327,6 +351,7 @@ img {
   font-weight: var(--font-semi-bold);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
+  border-radius: 15px;
 }
 
 .button i {
@@ -750,8 +775,8 @@ img {
     height: calc(var(--header-height) + 1.5rem);
   }
   .blur-header::after {
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px); /* For safari */
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px); /* For safari */
   }
 
   .home__container {
